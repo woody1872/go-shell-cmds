@@ -11,6 +11,7 @@ import (
 func main() {
 	var ip string
 	flag.StringVar(&ip, "i", "8.8.8.8", "ip address")
+	flag.Parse()
 
 	cmd := exec.Command("ping", "-c 2", "-i 1", ip)
 
